@@ -1,0 +1,9 @@
+# 与开发机一致的精确版本，用于在服务器上复现实验（scripts/setup_env.sh 会用它）。
+# 世界生成只用 numpy 的基本浮点运算和查表，版本一致可保证同一种子逐位相同（scripts/check_repro.py 可验证）。
+# torch 单独安装：GPU 机器用 CUDA 版（见 setup_env.sh 的 TORCH_VARIANT），这里不写，避免装错变体。
+numpy==1.26.4
+scipy==1.11.4
+# 开发机上的 3.6.3 来自 Ubuntu apt，PyPI 没有它的 Python 3.12 wheel；matplotlib 只用于画图，不影响结果
+matplotlib==3.8.4
+gymnasium==1.4.0
+pytest==9.1.1
